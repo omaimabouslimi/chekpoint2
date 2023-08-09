@@ -1,0 +1,20 @@
+ALGORITHM check
+VAR
+str: STRING;
+i,len,j: INTEGER :=1;
+nbwords: INTEGER:=1;
+BEGIN
+WHILE (str[i]<> '.') DO
+len := len + 1;
+i := i+1 ;
+END_WHILE
+FOR j FROM 0 TO len -1 STEP step DO
+IF (str[j]=' ')THEN
+nbwords:=nbwords+1;
+END_IF  
+END_FOR
+for i FROM 0 TO len-1 STEP step DO
+IF (str[i]="a" OR str[i]="u" OR str[i]="i" OR str[i]="o" OR str[i]="e" OR str[i]="y")THEN
+nbvoy:=nbvoy+1;
+END_IF
+END_FOR
